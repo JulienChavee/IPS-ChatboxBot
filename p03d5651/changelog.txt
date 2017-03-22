@@ -1,0 +1,54 @@
+TODO :
+- Les sujets créés automatiquement (flux RSS) ne sont pas mentionnés dans le tchat
+
+• 1.0.10 - 14 Novembre 2016
+- Lorsqu'on créé un topic, si on coche des options de modération, celles-ci sont correctement appliquées
+
+• 1.0.9 - 01 Septembre 2016
+- Les retours à la ligne dans un tweet sont correctement affichés dans les shouts
+
+• 1.0.8 - 17 Mai 2016
+- Augmentation de la limite du timeout
+
+• 1.0.8 RC 1 - 16 Mai 2016
+- Lors d’une exception, le message de l’exception est également logué
+
+• 1.0.7.1 - 07 Avril 2016 •
+- Ajout des chaînes de langue manquante
+
+• 1.0.7 - 07 Avril 2016 •
+- Ajout d’un shout lorsqu’un nouveau sujet est créé
+
+• 1.0.6.2 - 05 Avril 2016 •
+- Résolution d’un bug dans le le rendu des liens de hashtag et mention : les espaces étaient pris dans le lien
+
+• 1.0.6.1 - 05 Avril 2016 •
+- Les exceptions « globales » renvoient toute la trace de l’exception plutôt que le message uniquement
+
+• 1.0.6 - 01 Avril 2016 •
+- Correction d’un bug empêchant les exceptions d’être correctement loguées
+- Résolution d’un bug ne parsant correctement les caractères spéciaux (‘â’ par exemple)
+- Un problème survenant lors de l’ajout du tweet en BDD ne bloque plus le déroulement du reste de la récupération des tweets
+- Les tweets ne sont plus importés en double lorsque, pour un même utilisateur, plusieurs nouveaux tweets sont importés
+- Suite à la correction précédente, pour un même utilisateur, si plusieurs nouveaux tweets sont importés, ceux-ci sont enregistrés du plus ancien au plus récent
+
+• 1.0.6 Alpha 1 - 01 Avril 2016 •
+- Ajout d’un debug lors de l’importation des tweets afin d’identifier un problème de tweets importés 2/3 fois de suite
+
+• 1.0.5 - 18 Mars 2016 •
+- Ajout des chaînes de langue
+- Ajout des logs si les utilisateurs n’existent pas
+- Ajout d’un try/catch pour catcher les exceptions pouvant survenir
+
+• 1.0.4 - 16 Mars 2016 •
+- Résolution d’un bug concernant les liens. Ceux-ci sont parsés par la shoutbox, les balises <a> étaient donc reparsées elles aussi
+
+• 1.0.1, 1.0.2, 1.0.3 - 16 Mars 2016 •
+- Ajout de la possibilité de remettre à 0 le cache de tweet
+- Ajout de la possibilité d’utiliser la date du tweet pour publier le shout, plutôt que la date à laquelle le shout a été envoyé
+- Correction d’un problème lors de l’édition du membre responsable du shout
+- Ajout du pseudo de l’auteur du tweet avant son tweet
+- Rectification d’un problème de parsage des retweets
+
+• 1.0.0 - 15 Mars 2016 •
+- Première release
