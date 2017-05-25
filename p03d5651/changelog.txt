@@ -1,5 +1,9 @@
-TODO :
-- Les sujets créés automatiquement (flux RSS) ne sont pas mentionnés dans le tchat
+• 2.0.1 - 25 Mai 2017
+- Les messages pour un nouveau topic ne sont plus dupliqués
+
+• 2.0.0 - 25 Mai 2017
+- Les sujets postés via l’import RSS sont maintenant mentionné dans la shoutbox
+- Ajout d’un bouton dans les paramètres de chatbox redirigeant vers les paramètres de ce plugin
 
 • 1.0.10 - 14 Novembre 2016
 - Lorsqu'on créé un topic, si on coche des options de modération, celles-ci sont correctement appliquées

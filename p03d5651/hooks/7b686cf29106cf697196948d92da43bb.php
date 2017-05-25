@@ -8,8 +8,6 @@ if ( !defined( '\IPS\SUITE_UNIQUE_KEY' ) )
 
 class hook43 extends _HOOK_CLASS_
 {
-
-
 	/**
 	 * Execute
 	 *

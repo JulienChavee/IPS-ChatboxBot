@@ -8,6 +8,8 @@ if ( !defined( '\IPS\SUITE_UNIQUE_KEY' ) )
 
 class hook15 extends _HOOK_CLASS_
 {
+	private $ceNew;
+
 	/**
 	 * Save Changed Columns
 	 *
@@ -15,8 +17,16 @@ class hook15 extends _HOOK_CLASS_
 	 */
 	public function save()
 	{
+		if( $this->_new AND !isset($this->ceNew) )
+		{
+			$this->ceNew = TRUE;
+		}
+
 		call_user_func_array( 'parent::save', func_get_args() );
 
+		if ( !$this->ceNew )
+			return;
+		
 		if(get_class($this)=='IPS\forums\Topic')
 		{
 			$forum = $this->container();
@@ -37,6 +47,8 @@ class hook15 extends _HOOK_CLASS_
 										'time'		=> $time,
 				) );
 			}
+
+			$this->ceNew = FALSE;
 		} else
 			return;
 	}
