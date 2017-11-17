@@ -54,12 +54,14 @@ class _tweet_import extends \IPS\Task
 				if( isset( $cache[$v] ) ) {
 					$tweets = array_reverse( $connexion->get( 'statuses/user_timeline', array( 
 						'screen_name'	=> $v,
-						'since_id' => $cache[$v]
+						'since_id' => $cache[$v],
+						'tweet_mode' => 'extended'
 					) ) );
 				} else {
 					$tweets = $connexion->get( 'statuses/user_timeline', array( 
 						'screen_name'	=> $v,
-						'count' => 1
+						'count' => 1,
+						'tweet_mode' => 'extended'
 					) );
 				}
 				
@@ -116,11 +118,11 @@ class _tweet_import extends \IPS\Task
 
 	protected function format_tweet($tweet) {
 		if(isset($tweet->retweeted_status)) {
-			$formatted_text = $this->linkify($tweet->retweeted_status->text);
+			$formatted_text = $this->linkify($tweet->retweeted_status->full_text);
 
 			$formatted_text = "RT <a target='_blank' href='//twitter.com/".$tweet->retweeted_status->user->screen_name."'>@".$tweet->retweeted_status->user->screen_name."</a> : $formatted_text";
 		} else {
-			$formatted_text =  $this->linkify($tweet->text);
+			$formatted_text =  $this->linkify($tweet->full_text);
 		}
 
 		return nl2br( $formatted_text );
