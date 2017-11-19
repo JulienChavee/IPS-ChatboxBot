@@ -1,3 +1,6 @@
+• 2.0.3 - 19 Novembre 2017
+- Correction des hooks qui n'étaient plus inclus dans le package
+
 • 2.0.2 - 17 Novembre 2017
 - Affichage des tweets en entier si ceux-ci dépassent 140 caractères
 
